@@ -1,0 +1,36 @@
+# Visual Studio
+.vs/
+*.user
+*.opendb
+*.VC.db
+
+# CMake/VS build dirs
+[Cc]MakeFiles/
+CMakeCache.txt
+CMakeSettings.json
+cmake-build-*/
+build/
+out/
+x64/
+x86/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+
+# Compiled outputs
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.exe
+*.dll
+*.lib
+*.exp
+
+# OS cruft
+.DS_Store
+Thumbs.db
