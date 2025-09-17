@@ -13,3 +13,6 @@ target_include_directories(cs236 PRIVATE include)
 # target_include_directories(NumbersReversed PRIVATE include)
 add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 target_include_directories(NumbersReversed PRIVATE include)
+
+add_executable(IsPalindrome assignments/IsPalindrome/IsPalindrome.cpp)
+target_include_directories(IsPalindrome PRIVATE include)
