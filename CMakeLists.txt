@@ -11,8 +11,15 @@ target_include_directories(cs236 PRIVATE include)
 # Example (we'll add the file in step 6):
 # add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 # target_include_directories(NumbersReversed PRIVATE include)
+
+# NumbersReversed assignment
 add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 target_include_directories(NumbersReversed PRIVATE include)
 
+# IsPalindrome assignment
 add_executable(IsPalindrome assignments/IsPalindrome/IsPalindrome.cpp)
 target_include_directories(IsPalindrome PRIVATE include)
+
+# Refactor IsPalindrome with class
+add_executable(PalindromeChecker assignments/IsPalindromeRefactor/PalindromeChecker.cpp)
+target_include_directories(PalindromeChecker PRIVATE include)
