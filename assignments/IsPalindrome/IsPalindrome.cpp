@@ -76,7 +76,7 @@ int main() {
 	/*
 	*	Palindrome Check: 
 	*		Compare first and last elements, moving toward the middle. 
-	*		Only loop halfway. Beyond is redundant. 
+	*		Only loop (check) halfway. Beyond is redundant. 
 	*/
 	bool isPalindrome = true;
 	for (int i = 0; i < numCount / 2; i++) {  
