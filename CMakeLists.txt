@@ -23,3 +23,7 @@ target_include_directories(IsPalindrome PRIVATE include)
 # Refactor IsPalindrome with class
 add_executable(PalindromeChecker assignments/IsPalindromeRefactor/PalindromeChecker.cpp)
 target_include_directories(PalindromeChecker PRIVATE include)
+
+# TicTacToe two dimensional array example 
+add_executable(TicTacToe samples/TwoDimensionalArrays/TicTacToe.cpp)
+target_include_directories(TicTacToe PRIVATE include)
