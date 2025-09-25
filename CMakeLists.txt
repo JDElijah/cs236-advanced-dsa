@@ -27,3 +27,7 @@ target_include_directories(PalindromeChecker PRIVATE include)
 # TicTacToe two dimensional array example 
 add_executable(TicTacToe samples/TwoDimensionalArrays/TicTacToe.cpp)
 target_include_directories(TicTacToe PRIVATE include)
+
+# SinglyLinkedList example
+add_executable(SinglyLinkedList samples/SinglyLinkedList/SinglyLinkedList.cpp)
+target_include_directories(SinglyLinkedList PRIVATE include)
