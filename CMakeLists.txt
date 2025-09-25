@@ -31,3 +31,7 @@ target_include_directories(TicTacToe PRIVATE include)
 # SinglyLinkedList example
 add_executable(SinglyLinkedList samples/SinglyLinkedList/SinglyLinkedList.cpp)
 target_include_directories(SinglyLinkedList PRIVATE include)
+
+# CircularlyLinkedList example 
+add_executable(CircularlyLinkedList samples/CircularlyLinkedList/CircularlyLinkedList.cpp)
+target_include_directories(CircularlyLinkedList PRIVATE include)
