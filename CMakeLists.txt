@@ -43,3 +43,11 @@ target_include_directories(CircularlyLinkedListSimple PRIVATE include)
 # DoublyLinkedList example
 add_executable(DoublyLinkedList samples/DoublyLinkedList/DoublyLinkedList.cpp)
 target_include_directories(DoublyLinkedList PRIVATE include)
+
+# FactorialRecursion example 
+add_executable(FactorialRecursion samples/Recursion/FactorialRecursion.cpp)
+target_include_directories(FactorialRecursion PRIVATE include)
+
+# EnglishRulerRecursion example
+add_executable(EnglishRulerRecursion samples/Recursion/EnglishRulerRecursion.cpp)
+target_include_directories(EnglishRulerRecursion PRIVATE include)
