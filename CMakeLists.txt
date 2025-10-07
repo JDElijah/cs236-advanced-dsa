@@ -36,6 +36,10 @@ target_include_directories(SinglyLinkedList PRIVATE include)
 add_executable(CircularlyLinkedList samples/CircularlyLinkedList/CircularlyLinkedList.cpp)
 target_include_directories(CircularlyLinkedList PRIVATE include)
 
+# CircularlyLinkedListSimple example
+add_executable(CircularlyLinkedListSimple samples/CircularlyLinkedList/CircularlyLinkedListSimple.cpp)
+target_include_directories(CircularlyLinkedListSimple PRIVATE include)
+
 # DoublyLinkedList example
 add_executable(DoublyLinkedList samples/DoublyLinkedList/DoublyLinkedList.cpp)
 target_include_directories(DoublyLinkedList PRIVATE include)
