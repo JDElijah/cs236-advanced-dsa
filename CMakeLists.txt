@@ -55,3 +55,7 @@ target_include_directories(EnglishRulerRecursion PRIVATE include)
 # BinarySearch example 
 add_executable(BinarySearch samples/Recursion/BinarySearch.cpp)
 target_include_directories(BinarySearch PRIVATE include)
+
+# FileSystem example 
+add_executable(FileSystem samples/Recursion/FileSystem.cpp)
+target_include_directories(FileSystem PRIVATE include)
