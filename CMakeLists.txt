@@ -51,3 +51,7 @@ target_include_directories(FactorialRecursion PRIVATE include)
 # EnglishRulerRecursion example
 add_executable(EnglishRulerRecursion samples/Recursion/EnglishRulerRecursion.cpp)
 target_include_directories(EnglishRulerRecursion PRIVATE include)
+
+# BinarySearch example 
+add_executable(BinarySearch samples/Recursion/BinarySearch.cpp)
+target_include_directories(BinarySearch PRIVATE include)
