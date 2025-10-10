@@ -12,6 +12,10 @@ target_include_directories(cs236 PRIVATE include)
 # add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 # target_include_directories(NumbersReversed PRIVATE include)
 
+# Recursion assignment
+add_executable(Recursion assignments/Recursion/Recursion.cpp)
+target_include_directories(Recursion PRIVATE include)
+
 # NumbersReversed assignment
 add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 target_include_directories(NumbersReversed PRIVATE include)
@@ -59,3 +63,4 @@ target_include_directories(BinarySearch PRIVATE include)
 # FileSystem example 
 add_executable(FileSystem samples/Recursion/FileSystem.cpp)
 target_include_directories(FileSystem PRIVATE include)
+
