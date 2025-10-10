@@ -8,6 +8,8 @@
 * Brief:
 *	Program that demonstrates a recursive method called digitCount() that takes a nonnegative
 *	number as a parameter and returns the number of digits in the integer. 
+*
+* Notes at the end regarding digit limit with data type int. 
 */
 
 
@@ -62,10 +64,25 @@ int main() {
 	}
 	try {
 		int digits = digitCount(num);
-		std::cout << "The number of digits in " << num << " is: " << digits << std::endl; 
+		std::cout << "There are " << digits << " digits in the number " << num << std::endl; 
 	}
 	catch (const std::invalid_argument& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
 	return 0;
 }
+
+
+/*
+* Note: 
+*  If the program must take in very large numbers, consider changing the 
+* parameter type from int to std::string since int is limited to approx 10 digit numbers
+* 
+* int digitCount(const std::string& s) {
+    for (char c : s) {
+        if (!isdigit(c)) throw std::invalid_argument("Input contains non-digit characters.");
+    }
+    return s.size();
+}
+* other options are long long / or unsigned long long 
+*/
