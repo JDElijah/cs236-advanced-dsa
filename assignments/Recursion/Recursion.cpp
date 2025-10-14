@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <limits>
 
 
 int digitCount(int x) {
