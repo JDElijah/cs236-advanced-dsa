@@ -15,7 +15,7 @@
 template <typename E> 
 class Stack {
 private: 
-	std::vector<E> data;	// container. 
+	std::vector<E> data;	// underlying container for our Stack. 
 
 public:
 	
@@ -61,7 +61,7 @@ public:
 		std::cout << "[ ";
 		for (int i = 0; i < data.size(); ++i) {
 			std::cout << data[i]; 
-			if (i != data.size() - 1) std::cout << " ";
+			if (i != data.size() - 1) std::cout << ", ";
 		}
 		std::cout << " ]\n";
 	}
