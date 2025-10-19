@@ -8,8 +8,9 @@
 		Then the program removes (pop) one item at a time, displaying the stack after each pop. 
 */
 #include <iostream>
-#include <stdexcept> // for std::underflow_error
 #include <vector>
+#include <string>
+#include <stdexcept> // for std::underflow_error
 
 /* TEMPLATE STACK CLASS */
 template <typename E> 
