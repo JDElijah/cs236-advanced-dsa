@@ -18,7 +18,7 @@
 #include <limits>
 
 
-int digitCount(int x) {
+size_t digitCount(size_t x) {
 	// ensure valid x
 	if (x < 0) {
 		throw std::invalid_argument("Argument must be nonnegative.");
@@ -40,7 +40,7 @@ int digitCount(int x) {
 }
 
 int main() {
-	int num; 
+	size_t num; 
 
 	while (true) {
 		std::cout << "Enter an integer: "; 
@@ -64,7 +64,7 @@ int main() {
 		break; 
 	}
 	try {
-		int digits = digitCount(num);
+		size_t digits = digitCount(num);
 		std::cout << "There are " << digits << " digits in the number " << num << std::endl; 
 	}
 	catch (const std::invalid_argument& e) {
