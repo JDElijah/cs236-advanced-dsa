@@ -64,7 +64,11 @@ target_include_directories(BinarySearch PRIVATE include)
 add_executable(FileSystem samples/Recursion/FileSystem.cpp)
 target_include_directories(FileSystem PRIVATE include)
 
-# Stacks example 
+# Stacks assignment  
 add_executable(Stacks assignments/CreatingAStack/Stacks.cpp)
 target_include_directories(Stacks PRIVATE include)
+
+# Queue, ArrayQueue example 
+add_executable(ArrayQueue samples/Queues/ArrayQueue.cpp)
+target_include_directories(ArrayQueue PRIVATE include)
 
