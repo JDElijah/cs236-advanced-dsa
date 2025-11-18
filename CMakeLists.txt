@@ -76,6 +76,10 @@ target_include_directories(Stacks PRIVATE include)
 add_executable(ArrayQueue samples/Queues/ArrayQueue.cpp)
 target_include_directories(ArrayQueue PRIVATE include)
 
+# HeapPriorityQueue example 
+add_executable(HeapPriorityQueue samples/Queues/HeapPriorityQueue.cpp)
+target_include_directories(HeapPriorityQueue PRIVATE include)
+
 # ListAndIteratorADTs LinkedPositionalList example 
 add_executable(LinkedPositionalList samples/ListAndIteratorADTs/LinkedPositionalList.cpp)
 target_include_directories(LinkedPositionalList PRIVATE include)
