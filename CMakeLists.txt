@@ -12,6 +12,10 @@ target_include_directories(cs236 PRIVATE include)
 # add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 # target_include_directories(NumbersReversed PRIVATE include)
 
+# StudentGrades HashMap assignment 
+add_executable(Hash assignments/StudentGradesHashMap/Hash.cpp)
+target_include_directories(Hash PRIVATE include)
+
 # BinaryTreeTraversal assignment
 add_executable(BinaryTreeTraverse assignments/BinaryTreeTraversal/BinaryTreeTraverse.cpp)
 target_include_directories(BinaryTreeTraverse PRIVATE include)
