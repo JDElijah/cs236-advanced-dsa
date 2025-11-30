@@ -74,7 +74,7 @@ public:
 
 
 
-	// Inorder Travesal (Left -> Root -> Right)
+	// Inorder Traversal (Left -> Root -> Right)
 	static void inorder(const Node* node) {
 		if (!node) return;
 		inorder(node->left); 
