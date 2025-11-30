@@ -17,27 +17,109 @@ struct Node {
 	Node* left;
 	Node* right; 
 
+	// Explicit prevents accidental implicit conversions, such as 'Node n = 10' 
+	// We want to make sure Node objects are constructed clearly and correctly. 
 	explicit Node(int k)
 		: key(k), height(1), left(nullptr), right(nullptr) {}
 };
 
 class BuildAVLFromArray {
 public:
-	// Helper: Return height of a node
+	// Helper functions marked static because they don't depend on object instance of BuildAVLFromArray. They only
+	// operate on the node pointer that is given as a parameter. Simply, static clarifies that the method belongs to the class isteld, not 
+	// an individual tree object.
 
+	// Helper: Return height of a node
+	static int height(const Node* n) {
+		// TODO: return 0 if n is null, otherwise, n.height
+		return n ? n->height : 0; 
+	}
+	
 	// Helper: Compute balance factor (right - left)
+	static int getBalance(const Node* n) {
+		// TODO: return height(n.right) - height(n.left)
+		if (!n) {
+			return 0; 
+		}
+		return (height(n->right) - height(n->left));
+	}
 
 	// Recursively build AVL tree from sorted array
+	Node* buildAVLFromSortedArray(const std::vector<int>& arr, int start, int end) {
+		/* TODO:
+		*	1. Base case: if start > end, return null
+		*	2. Pick middle index as root. 
+		*	3. Recursively build left and right subtrees
+		*	4. Update height
+		*	5. Return the root. 
+		*/
+
+		// 1.
+		if (start > end) return nullptr; 
+
+		// 2.
+		int mid = start + (end - start) / 2; 
+		Node* root = new Node(arr[mid]);
+
+		// 3.
+		root->left = buildAVLFromSortedArray(arr, start, mid - 1);
+		root->right = buildAVLFromSortedArray(arr, mid + 1, end);
+
+		// 4. 
+		root->height = 1 + std::max(height(root->left), height(root->right)); 
+
+		// 5. 
+		return root; 
+	}
+
+
 
 	// Inorder Travesal (Left -> Root -> Right)
+	static void inorder(const Node* node) {
+		if (!node) return;
+		inorder(node->left); 
+		std::cout << node->key << " "; 
+		inorder(node->right); 
+	}
 
 	// Preorder Traversal (Root -> Left -> Right) 
+	static void preorder(const Node* node) {
+		if (!node) return; 
+		std::cout << node->key << " "; 
+		preorder(node->left); 
+		preorder(node->right);
+	}
 
-	// Clean up memory (postorder delete) 
+	// Clean up memory (postorder delete)
+	// Needed because this implementation uses raw pointers. The tree doesn't free memory automatically. 
+	// destroy() executes a post-order traversal and deletes every node to prevent memory leaks. 
+	static void destroy(Node* node) {
+		if (!node) return;
+		destroy(node->left); 
+		destroy(node->right); 
+		delete node; 
+	}
 
 };
 
 /// Main for testing 
 int main() {
+	BuildAVLFromArray tree; 
+
+	std::vector<int> arr = { 10, 20, 30, 40, 50, 60, 70 };
+	Node* root = tree.buildAVLFromSortedArray(arr, 0, arr.size() - 1);
+
+	std::cout << "Inorder traversal: \n"; 
+	BuildAVLFromArray::inorder(root); 
+	std::cout << "\n"; 
+
+	std::cout << "Preorder traversal: \n"; 
+	BuildAVLFromArray::preorder(root); 
+	std::cout << "\n"; 
+
+	std::cout << "Root balance factor = " << BuildAVLFromArray::getBalance(root) << "\n"; 
+
+	BuildAVLFromArray::destroy(root); 
+
 	return 0;
 }
