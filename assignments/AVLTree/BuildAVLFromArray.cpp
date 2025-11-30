@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <algorithm>	//  std::max, (to compute height of each node after building left and right subtrees)
 
 struct Node {
 	int key; 
@@ -123,3 +123,15 @@ int main() {
 
 	return 0;
 }
+
+
+/* 
+* Notes: 
+	Try matching buildAVLFromSortedArray declaration similarly to Java skeleton code.
+	However, can be set to static as well, since it doesn't need object state.
+
+	const Node* in helper functions: 
+	- The function can read the node but cannot modify it 
+	- Makes code safer and clearer. 
+	- Prevents accidental changes while traversing or computing height/balance. 
+*/
