@@ -26,7 +26,7 @@ struct Node {
 class BuildAVLFromArray {
 public:
 	// Helper functions marked static because they don't depend on object instance of BuildAVLFromArray. They only
-	// operate on the node pointer that is given as a parameter. Simply, static clarifies that the method belongs to the class isteld, not 
+	// operate on the node pointer that is given as a parameter. Simply, static clarifies that the method belongs to the class instead, not 
 	// an individual tree object.
 
 	// Helper: Return height of a node
