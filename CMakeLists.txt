@@ -92,4 +92,8 @@ target_include_directories(HeapPriorityQueue PRIVATE include)
 add_executable(LinkedPositionalList samples/ListAndIteratorADTs/LinkedPositionalList.cpp)
 target_include_directories(LinkedPositionalList PRIVATE include)
 
+# Maps SortedTableMap example 
+add_executable(SortedTableMap samples/Maps/SortedTableMap.cpp)
+target_include_directories(SortedTableMap PRIVATE include)
+
 
