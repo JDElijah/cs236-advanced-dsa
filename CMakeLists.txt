@@ -12,6 +12,10 @@ target_include_directories(cs236 PRIVATE include)
 # add_executable(NumbersReversed assignments/NumbersReversed/NumbersReversed.cpp)
 # target_include_directories(NumbersReversed PRIVATE include)
 
+# Shortest Disance in Graph Assignment 
+add_executable(ShortestDistance assignments/ShortestDistanceGraph/ShortestDistance.cpp)
+target_include_directories(ShortestDistance PRIVATE include)
+
 # IsArraySorted Assignment
 add_executable(IsArraySorted assignments/IsArraySorted/IsListSorted.cpp)
 target_include_directories(IsArraySorted PRIVATE include)
